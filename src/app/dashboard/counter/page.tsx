@@ -2,7 +2,7 @@ import React from 'react'
 
 const CounterPage = () => {
     return (
-        <div>CounterPage</div>
+        <div>Reservaciones On line</div>
     )
 }
 
