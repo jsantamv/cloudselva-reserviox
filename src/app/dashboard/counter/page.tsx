@@ -14,7 +14,7 @@ const CounterPage = () => {
             <span>Productos en el carrito de compras</span>
             
 
-           <CartCounter/>
+           <CartCounter initialValue={20}/>
         </div>
     )
 }
