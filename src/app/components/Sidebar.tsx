@@ -6,13 +6,13 @@ import { SidebarMenuItem } from './SidebarMenuItem'
 const menuItems = [
     {
         path: '/dashboard/main',
-        icon: <IoBrowsersOutline size={40}/>,
+        icon: <IoBrowsersOutline size={30}/>,
         title: 'Dashboard',
         subTitle: 'Data Overview'
     },
     {
         path: '/dashboard/counter',
-        icon: <IoCalculator />,
+        icon: <IoCalculator size={30}/>,
         title: 'Reservaciones',
         subTitle: 'Counter Test'
     },
