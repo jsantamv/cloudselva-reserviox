@@ -8,7 +8,7 @@ interface Props {
 
 export const CartCounter = ({initialValue = 0}: Props) => {
     
-    const [count, setCount] = useState(initialValue)
+    const [count, setCount] = useState(initialValue);
 
 
     return (
