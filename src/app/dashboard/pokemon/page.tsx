@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { PokemonsResponse, SimplePokemon } from "@/app/pokemons";
+import { PokemonGrid, PokemonsResponse, SimplePokemon } from "@/app/pokemons";
 
 const getPokemon = async (limit = 20, offset = 0): Promise<SimplePokemon[]> => {
 
@@ -22,19 +22,12 @@ export default async function PokemonPage() {
   const pokemon = await getPokemon();
 
   return (
-    <div className="flex flex-wrap gap-10 items-center justify-center">
+    <div className='flex flex-col'>
 
-      {pokemon.map((poke: SimplePokemon) => (
-        <div key={poke.id}>
-          <Image
-            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${poke.id}.svg`}
-            width={100}
-            height={100}
-            alt={poke.name}
-          />
-          <p className="text-center capitalize">{poke.name}</p>
-        </div>
-      ))}
+      <span className='text-5xl my-2'>Listado de pokemons <small>statitico</small></span>
+      
+      <PokemonGrid pokemons={pokemon} />
+
     </div>
   );
 }
