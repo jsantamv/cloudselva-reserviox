@@ -21,6 +21,7 @@ export const PokomenCard = ({ pokemon }: Props) => {
             height={100}
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`}
             alt={name}
+            priority={false}
           />
           <p className="pt-2 text-lg font-semibold text-gray-50 capitalize">{name}</p>
           <div className="mt-5">
