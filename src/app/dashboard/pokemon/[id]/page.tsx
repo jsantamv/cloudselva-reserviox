@@ -28,11 +28,6 @@ const getPokemon = async (id: string): Promise<Pokemon> => {
     cache: 'force-cache'
   })
     .then(res => res.json())
-
-
-    console.log(`fjadfas ${pokemon.name}`)
-
-
   return pokemon;
 
 }
