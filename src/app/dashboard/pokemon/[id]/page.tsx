@@ -14,17 +14,22 @@ interface Props {
  * interesante
  */
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  try {
+    const { id, name } = await getPokemon(params.id);
 
-  const { id, name } = await getPokemon(params.id);
-
-  return {
-    title: `${id} ${name}`,
-    description: `Pokemon name ${name}:`,
+    return {
+      title: `${id} ${name}`,
+      description: `Pokemon name ${name}:`,
+    }
+  } catch (error) {
+    return {
+      title: `Pokemon not found`,
+      description: `Pokemon not found`,
+    }
   }
 }
 
 const getPokemon = async (id: string): Promise<Pokemon> => {
-
   try {
     const pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`, {
       cache: 'force-cache'
